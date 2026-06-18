@@ -126,31 +126,3 @@ window.addEventListener("scroll", () => {
     document.getElementById("progress-bar")
     .style.width = progress + "%";
 });
-const searchInput =
-document.getElementById("searchInput");
-
-searchInput.addEventListener("keyup", () => {
-
-    const searchText =
-    searchInput.value.toLowerCase();
-
-    const cards =
-    document.querySelectorAll(".searchable");
-
-    cards.forEach(card => {
-
-        const text =
-        card.innerText.toLowerCase();
-
-        if(text.includes(searchText)){
-
-            card.style.display = "block";
-
-        }else{
-
-            card.style.display = "none";
-        }
-
-    });
-
-});
